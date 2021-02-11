@@ -109,6 +109,10 @@ $(function(){
 		return false;
     });
 
+    $('body').on("mouseleave", '.js-lang-switcher', function(){
+        $(this).find('ul').hide();
+    });
+
     $('body').on("click", '.js-location-switcher .js-country .js-current', function(){
         $('.js-location-switcher .js-country ul').css('display', 'flex');
 		return false;
