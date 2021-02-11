@@ -82,12 +82,16 @@
     .basket-main .items td .details .value, .orders-main .items td .details .value {
         text-align: right;
     }
+    .frm-item {
+        flex-wrap: wrap;
+    }
     .order-renew .items td .frm-item input, .basket-main .items td .frm-item input {
         margin-right: 0px;
         margin-left: 10px;
     }
     .basket-main .items td .frm-item button {
         margin-top: 10px;
+        width: 50%;
     }
 
     .mobile-tac {
