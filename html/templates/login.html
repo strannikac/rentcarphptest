@@ -1,0 +1,86 @@
+<div class="popup js-popup js-popup-login">
+    <div class="popup-fix">
+        <h2>{HDR_SIGNIN}</h2>
+
+        <form class="js-frm-login" method="post" action="" autocomplete="off">
+            <div class="error"></div>
+
+            <div class="frm-item">
+                <input name="login" type="email" autocomplete="off" class="email" maxlength="75" placeholder="{STR_EMAIL}" required="required" />
+                <button>{STR_SIGNIN}</button>
+            </div>
+
+            <div class="frm-item">
+                <input name="password" type="password" autocomplete="off" class="password" maxlength="20" placeholder="{STR_PASSWORD}" required="required" />
+                <a href="#" class="js-link-forgot">{STR_FORGOT_PASSWORD}</a>
+            </div>
+        </form>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-forgot">
+    <div class="popup-fix">
+        <h2>{HDR_FORGOT_PASSWORD}</h2>
+        <p>{TXT_FORGOT_PASSWORD}</p>
+
+        <form class="js-frm-forgot" method="post" action="" autocomplete="off">
+            <div class="error"></div>
+
+            <div class="frm-item">
+                <input name="login" type="email" autocomplete="off" maxlength="20" placeholder="{STR_EMAIL}" required="required" />
+                <button>{STR_SEND}</button>
+            </div>
+
+            <div class="frm-item">
+                <a href="#" class="js-link-login">{STR_SIGNIN}</a>
+            </div>
+        </form>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-forgot-response">
+    <div class="popup-fix">
+        <h2>{HDR_FORGOT_PASSWORD}</h2>
+        <p>{TXT_FORGOT_RESPONSE}</p>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-recovery">
+    <div class="popup-fix">
+        <h2>{HDR_RECOVERY_PASSWORD}</h2>
+        <p>{TXT_RECOVERY_PASSWORD}</p>
+
+        <form class="js-frm-recovery" method="post" action="" autocomplete="off">
+            <input name="token" type="hidden" value="" />
+
+            <div class="error"></div>
+
+            <div class="frm-item">
+                <input name="password" type="password" autocomplete="off" maxlength="20" placeholder="{STR_PASSWORD}" required="required" />
+                <button>{STR_SAVE}</button>
+            </div>
+
+            <div class="frm-item">
+                <input name="repassword" type="password" autocomplete="off" maxlength="20" placeholder="{STR_RETYPE_PASSWORD}" required="required" data-retype="1" />
+                <a href="#" class="js-link-login">{STR_SIGNIN}</a>
+            </div>
+        </form>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-recovery-response">
+    <div class="popup-fix">
+        <h2>{HDR_RECOVERY_PASSWORD}</h2>
+        <p>{TXT_RECOVERY_RESPONSE}</p>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>

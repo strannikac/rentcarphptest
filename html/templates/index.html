@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{META_TITLE}</title>
+
+        <meta name="keywords"    content="{META_KEYWORDS}" />
+        <meta name="description" content="{META_DESCRIPTION}" />	
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{_PATH_HTML_}favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="{_PATH_HTML_}favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="{_PATH_HTML_}favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="{_PATH_HTML_}favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="{_PATH_HTML_}favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="{_PATH_HTML_}favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="{_PATH_HTML_}favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="{_PATH_HTML_}favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="{_PATH_HTML_}favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{_PATH_HTML_}favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{_PATH_HTML_}favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="{_PATH_HTML_}favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{_PATH_HTML_}favicon/favicon-16x16.png">
+        <link rel="manifest" href="{_PATH_HTML_}favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{_PATH_HTML_}favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" media="all" href="{_PATH_HTML_}css/main.css"/>
+        <link rel="stylesheet" media="all" href="{_PATH_HTML_}css/layout.css"/>
+        <link rel="stylesheet" media="all" href="{_PATH_HTML_}css/jquery-ui.css"/>
+        <link rel="stylesheet" media="all" href="{_PATH_HTML_}css/mobile.css"/>
+        {CSS}
+        
+        <script>
+            const apiUrl = '{_PATH_API_}';
+            const pathImg = '{_PATH_IMG_}';
+            const domain = '{_DOMAIN_}';
+            const homeUrl = '{_HOME_URL_}';
+            const ARR_LOCALES = {_LOCALE_};
+            let languageId = {LANGUAGE_ID};
+            let languageIso = '{LANGUAGE_ISO}';
+        </script>
+			
+        <script src="{_PATH_HTML_}js/jquery-3.2.1.min.js"></script>
+        <script src="{_PATH_HTML_}js/jquery-ui.min.js"></script>
+        <script src="{_PATH_HTML_}js/jquery.cookie.js"></script>
+        <script src="{_PATH_HTML_}js/sha1.js"></script>
+        <script src="{_PATH_HTML_}js/client.js"></script>
+        <script src="{_PATH_HTML_}js/main.js"></script>
+        {JS}
+    </head>
+	
+    <body>
+        <header>
+            <div class="block-center">
+                <div class="header-wrap">
+                    <div class="left">
+                        <div class="logo-lang">
+                            <a class="logo" href="{_HOME_URL_}">Logo</a>
+                            {LANG_SWITCHER}
+                        </div>
+
+                        {LOCATION_SWITCHER}
+                    </div>
+
+                    <nav>
+                        {MAIN_MENU}
+                    </nav>
+
+                    {HEADER_PROFILE}
+
+                    <a class="ico-mobile-nav js-link-mobile-nav" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="block-center block-main">
+            {CONTENT}
+        </div>
+
+        <footer>
+            <div class="block-center">
+                <div class="footer-wrap">
+                    <div class="copyrights">&copy; 2021 RentCarCompany</div>
+
+                    <a class="ico-mobile-nav js-link-mobile-nav" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="mobile-nav js-popup js-mobile-nav">
+            <div class="wrap">
+                {HEADER_PROFILE}
+                <nav>{MAIN_MENU}</nav>
+
+                <a class="ico-mobile-nav js-link-closepopup" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+
+        {POPUPS}
+    </body>
+</html>

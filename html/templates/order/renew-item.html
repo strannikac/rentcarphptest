@@ -1,0 +1,26 @@
+<tr class="js-item" 
+	data-id="{ID}" 
+	data-minDays="{MIN_DAYS}" 
+	data-maxDays="{MAX_DAYS}" 
+	data-price="{DAY_PRICE}" 
+	data-holidayPercent="{HOLIDAY_PERCENT}" 
+	data-renewalFee="{RENEWAL_FEE}" 
+>
+	<td>
+		<label>{STR_CAR}</label>
+		<span class="mobile-tac">{TITLE}<br/>
+		<span class="small">{CATEGORY}</span></span>
+	</td>
+	<td>
+		<label>{STR_RENT_DATE}</label>
+    	<div class="frm-item">
+	        <input name="from_{ID}" class="datepicker js-from" value="{DATE_FROM}" readonly="readonly" data-prev="{DATE_FROM}" />
+	        <input name="till_{ID}" class="datepicker js-till" value="{DATE_TILL}" readonly="readonly" data-prev="{DATE_TILL}" />
+	    </div>
+		<div class="rented-dates js-rented-dates">{RENTED_DATES}</div>
+	</td>
+	<td>
+		<label>{STR_PRICE}</label>
+		<span class="price"><span class="js-price">{PRICE}</span>{CURRENCY_SIGN}</span>
+	</td>
+</tr>

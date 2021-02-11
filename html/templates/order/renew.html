@@ -1,0 +1,39 @@
+<div class="orders-main order-renew js-order-renew">
+    <h2>{STR_RENEW_ORDER} {INVOICE}</h2>
+    <p>{TXT_RENEW_ORDER}</p>
+    <p><a href="{LINK_ORDERS}">{STR_BACK_ORDERS}</a></p>
+
+    <form class="js-frm-renew{HIDDEN}" method="POST" action="" 
+        data-id="{ID}" 
+    >
+        <input name="confirm" type="hidden" value="1" />
+
+        <table class="items js-items">
+            <thead>
+                <tr>
+                    <th>{STR_CAR}</th>
+                    <th>{STR_RENT_DATE}</th>
+                    <th>{STR_PRICE}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {ITEMS}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td class="nomobile" colspan="2"><strong>{STR_TOTAL}</strong></td>
+                    <td>
+                        <label><strong>{STR_TOTAL}</strong></label>
+                        <span class="price"><span class="js-total-price">{TOTAL_PRICE}</span>{CURRENCY_SIGN}</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="error"></div>
+
+        <button>{STR_RENEW}</button>
+    </form>
+</div>

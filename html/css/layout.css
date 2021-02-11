@@ -1,0 +1,367 @@
+.block-main {
+	padding-top: 100px;
+}
+
+header {
+    position: fixed;
+    background-color: #efffef;
+    margin: 0;
+    padding: 20px 0px;
+    box-shadow: 1px -1px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    line-height: 1.2;
+    z-index: 500;
+}
+
+header .header-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+header .header-wrap .left {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+header .header-wrap .logo-lang {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+header .logo {
+    margin-top: -5px;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* header profile */
+header .profile a {
+    margin-left: 15px;
+}
+header .profile a.basket, .mobile-nav .profile a.basket {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 21px;
+    background-image: url(../images/ico_basket.png);
+    background-size: 70px auto;
+    margin-bottom: -3px;
+}
+header .profile a.basket span, .mobile-nav .profile a.basket span {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: -5px 0px 0px -5px;
+    padding: 1px 3px;
+    background-color: #007700;
+    color: #ffffff;
+    font-size: 0.8em;
+    border-radius: 50%;
+}
+/* header profile */
+
+header nav {
+    margin: 0px 13px 0px 13px;
+    flex-grow: 1;
+    text-align: center;
+}
+header nav a {
+    margin: 0px 7px;
+}
+
+/* ------ header lang start ----- */
+header .lang-switcher, 
+header .location-switcher {
+    position: relative;
+    margin-left: 20px;
+}
+header .lang-switcher {
+    z-index: 100;
+}
+header .lang-switcher .current, 
+header .location-switcher .current {
+    cursor: pointer;
+}
+header .lang-switcher ul, 
+header .location-switcher ul {
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+    flex-direction: column;
+    margin: -5px 0px 0px -10px;
+    background: rgba(255, 255, 255, 1);
+}
+header .lang-switcher li a, 
+header .location-switcher li a {
+    display: block;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+header .lang-switcher li.sel a, 
+header .location-switcher li.sel a {
+    font-weight: 900;
+}
+header .lang-switcher li a:hover, 
+header .location-switcher li a:hover {
+    background-color: #007700;
+    color: #ffffff;
+    text-decoration: none;
+}
+header .lang-switcher img {
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: -1px;
+    vertical-align: bottom;
+}
+/* ------ header lang end ----- */
+
+/* ------ header location start ----- */
+header .location-switcher {
+    display: flex;
+}
+header .location-switcher .region {
+    margin-left: 20px;
+}
+header .location-switcher .region ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ------ header location end ----- */
+
+/* ---------- footer start ---------- */
+footer {
+    padding: 20px 0px;
+    margin-top: auto;
+    background-color: #007700;
+    color: #ffffff;
+    min-width: 480px;
+    z-index: 100;
+}
+
+footer .footer-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* ---------- footer end ---------- */
+
+.block-main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+nav.myprofile {
+    margin-bottom: 20px;
+}
+nav.myprofile a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.cars-main {
+    display: flex;
+}
+.cars-main aside {
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,255,239,1) 30%);
+    margin: -100px 0px -20px 0px;
+    padding: 80px 20px 20px 0px;
+}
+.cars-main aside label {
+    display: block;
+    margin-top: 5px;
+}
+.cars-main aside .ico-filters-back {
+    position: absolute;
+    display: none;
+    right: 20px;
+    top: 200px;
+    font-weight: 900;
+    font-size: 2.3em;
+}
+.cars-main aside .ico-filters-back:hover, 
+.cars-main .cars-content .frm-cars .ico-filters:hover {
+    text-decoration: none;
+}
+.cars-main .cars-content {
+    padding-left: 30px;
+}
+.cars-main .cars-content .frm-cars {
+    margin-top: 30px;
+    display: flex;
+    align-items: baseline;
+}
+.cars-main .cars-content .frm-cars .ico-filters {
+    display: none;
+    width: 20px;
+    height: 23px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url(../images/ico_filter.svg);
+    background-size: 20px auto;
+    margin-right: 15px;
+}
+.cars-main .cars-content .frm-cars select {
+    margin-right: 20px;
+}
+.cars-main .cars-content .frm-cars .sortby .title, .cars-main .cars-content .frm-cars .sortby a {
+    margin-right: 10px;
+}
+.cars-main .cars-content .frm-cars .sortby a.active {
+    font-weight: 900;
+}
+.cars-main .cars-content .items {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cars-main .cars-content .items .item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0px 20px 20px 0px;
+    border: 1px solid #007700;
+    border-radius: 3px;
+}
+.cars-main .cars-content .items .item .photo {
+    height: 230px;
+}
+.cars-main .cars-content .items .item .photo img {
+    height: 100%;
+    width: auto;
+    border-radius: 3px;
+}
+.cars-main .cars-content .items .item .info {
+    margin-top: -10px;
+    padding: 0px 10px 15px 10px;
+    flex-grow: 1;
+}
+.cars-main .cars-content .items .item .info p {
+    margin-top: 5px;
+}
+.cars-main .cars-content .items .item form {
+    padding: 0px 10px 10px 10px;
+}
+.cars-main .cars-content .items .item form .frm-item {
+    justify-content: space-between;
+}
+.cars-main .cars-content .items .item input {
+    width: 49%;
+    margin-right: 0px;
+}
+.cars-main .cars-content .items .item button {
+    width: 100%;
+    margin-top: 10px;
+}
+.cars-main .cars-content .items .item .rented-dates {
+    display: none;
+}
+
+.basket-main .items, .orders-main .items {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.basket-main .items th, .orders-main .items th {
+    background-color: #dfffdf;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #007700;
+    padding: 5px 10px;
+}
+.orders-main .items .car-hdr {
+    background-color: #efffef;
+}
+.basket-main .items td, .orders-main .items td {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #007700;
+    padding: 5px 10px;
+}
+.basket-main .items td label, .orders-main .items td label {
+    display: none;
+}
+.orders-main .items .car, .orders-main .items .car-details {
+    background-color: #eeeeee;
+}
+.basket-main .items td .frm-item, .order-renew .items td .frm-item {
+    margin-top: 0px;
+}
+.basket-main .items td input, .order-renew .items td input {
+    width: 100px;
+}
+.basket-main .items td .details, .orders-main .items td .details {
+    display: flex;
+    width: 100%;
+}
+.basket-main .items td .details div, .orders-main .items td .details div {
+    margin-right: 20px;
+}
+.basket-main .items td .details div span, .orders-main .items td .details div span {
+    display: block;
+}
+.basket-main .items td .rented-dates, .order-renew .items td .rented-dates {
+    display: none;
+}
+
+.ico-mobile-nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+footer .ico-mobile-nav {
+    margin-top: -8px;
+}
+.ico-mobile-nav span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #007700;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+footer .ico-mobile-nav span {
+    background-color: #ffffff;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #efffef;
+    padding: 20px 20px;
+    z-index: 900;
+}
+
+.mobile-nav .wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.mobile-nav .profile, .mobile-nav nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.mobile-nav .profile a, .mobile-nav nav a {
+    margin: 5px 0px;
+}

@@ -1,0 +1,24 @@
+<div class="orders-main js-orders">
+	<nav class="myprofile">
+        <a href="{LINK_PROFILE}">{STR_MY_PROFILE}</a>
+        <a href="{LINK_ORDERS}"><strong>{STR_MY_ORDERS}</strong></a>
+    </nav>
+
+    <h2>{STR_MY_ORDERS}</h2>
+    <p>{TXT_MY_ORDERS}</p>
+
+    <table class="items js-items{HIDDEN}">
+        <tr>
+            <th>{STR_INVOICE}</th>
+            <th>{STR_ORDER_DATE}</th>
+            <th>{STR_PRICE}</th>
+            <th>{STR_DETAILS}</th>
+            <th>{STR_STATUS}</th>
+            <th>{STR_ACTIONS}</th>
+        </tr>
+        
+        <tbody>
+            {ITEMS}
+        </tbody>
+    </table>
+</div>

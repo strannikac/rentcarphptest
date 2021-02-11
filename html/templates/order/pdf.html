@@ -1,0 +1,29 @@
+<div class="orders-main pdf">
+    <h1>{INVOICE}</h1>
+    <p>{STR_ORDER_DATE}: {DATE_FROM} - {DATE_TILL}</p>
+
+    <table class="items">
+        <thead>
+            <tr>
+                <th>{STR_CAR}</th>
+                <th>{STR_RENT_DATE}</th>
+                <th>{STR_BASE_PRICE}</th>
+                <th>{STR_DETAILS}</th>
+                <th>{STR_PRICE}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {ITEMS}
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>{STR_TOTAL}</strong></td>
+                <td><strong>{BASE_PRICE}{CURRENCY_SIGN}</strong></td>
+                <td>{DETAILS}</td>
+                <td><strong class="price">{TOTAL_PRICE}{CURRENCY_SIGN}</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

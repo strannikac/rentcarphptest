@@ -1,0 +1,108 @@
+@media screen and (max-width: 1100px){
+    header .header-wrap .left {
+        flex-direction: column;
+    }
+    header .location-switcher {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .block-main {
+        padding-top: 130px;
+    }
+}
+
+@media screen and (max-width: 990px){
+    header nav, header .profile {
+        display: none;
+    }
+
+    .block-center, .bg-block-center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ico-mobile-nav, .cars-main aside .ico-filters-back, .cars-main .cars-content .frm-cars .ico-filters {
+        display: block;
+    }
+
+    .cars-main .cars-content {
+        padding-left: 0px;
+    }
+    .cars-main aside {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        padding-top: 210px;
+        padding-left: 20px;
+        margin-left: -300px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .basket-main .items tr, .orders-main .items tr {
+        display: block;
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: #007700;
+        padding: 7px 0px;
+    }
+    .basket-main .items th, .orders-main .items th, 
+    .basket-main .items td.nomobile, .orders-main .items td.nomobile, 
+    .orders-main .items .car-hdr {
+        display: none;
+    }
+    .basket-main .items td, .orders-main .items td {
+        display: flex;
+        border-width: 0px;
+        padding: 3px 0px;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .orders-main .items .car td, .orders-main .items .car-details td {
+        padding: 3px 10px;
+    }
+    .basket-main .items td label, .orders-main .items td label {
+        display: inline-block;
+    }
+    .basket-main .items td .details, .orders-main .items td .details {
+        flex-direction: column;
+    }
+    .basket-main .items td .details div, .orders-main .items td .details div {
+        display: flex;
+        margin-right: 0px;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .order-renew .items td .frm-item input {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+
+    .mobile-tac {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .popup-fix {
+        width: 100%;
+    }
+
+    .cars-main .cars-content .items .item {
+        width: 100%;
+        margin-right: 0px;
+        height: auto;
+    }
+    .cars-main .cars-content .items .item .photo {
+        height: auto;
+    }
+    .cars-main .cars-content .items .item .photo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+

@@ -1,0 +1,49 @@
+<div class="orders-main order-terminate js-order-terminate">
+    <h2>{STR_TERMINATE_ORDER} {INVOICE}</h2>
+    <p>{TXT_TERMINATE_ORDER}</p>
+    <p><a href="{LINK_ORDERS}">{STR_BACK_ORDERS}</a></p>
+
+    <form class="js-frm-terminate{HIDDEN}" method="POST" action="" 
+        data-id="{ID}" 
+    >
+        <input name="confirm" type="hidden" value="1" />
+
+        <table class="items js-items">
+            <thead>
+                <tr>
+                    <th>{STR_CAR}</th>
+                    <th>{STR_RENT_DATE}</th>
+                    <th>{STR_PRICE}</th>
+                    <th>{STR_TERMINATION_FEE}</th>
+                    <th>{STR_TERMINATION_PRICE}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {ITEMS}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2"><strong>{STR_TOTAL}</strong></td>
+                    <td>
+                        <label>{STR_PRICE}</label>
+                        <span class="price"><span class="js-total-price">{TOTAL_PRICE}</span>{CURRENCY_SIGN}</span>
+                    </td>
+                    <td>
+                        <label>{STR_TERMINATION_FEE}</label>
+                        <span class="price"><span class="js-total-termination-fee">{TOTAL_TERMINATION_FEE}</span>{CURRENCY_SIGN}</span>
+                    </td>
+                    <td>
+                        <label>{STR_TERMINATION_PRICE}</label>
+                        <span class="price"><span class="js-total-termination-price">{TOTAL_TERMINATION_PRICE}</span>{CURRENCY_SIGN}</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="error"></div>
+
+        <button>{STR_TERMINATE}</button>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+<tr class="js-item" data-id="{ID}">
+	<td>
+		<label>{STR_INVOICE}</label>
+		<span>{INVOICE}</span>
+	</td>
+	<td>
+		<label>{STR_ORDER_DATE}</label>
+        <span>{DATE_FROM} - {DATE_TILL}</span>
+	</td>
+	<td>
+		<label>{STR_PRICE}</label>
+		<span class="price">{PRICE}{CURRENCY_SIGN}</span>
+	</td>
+	<td>
+		<label>{STR_DETAILS}</label>
+		<span class="mobile-tac"><a href="#" class="js-link-details">{STR_DETAILS}</a><br/>
+		<a href="#" class="js-link-cars">{STR_CARS}</a></span>
+	</td>
+	<td>
+		<label>{STR_STATUS}</label>
+		<span>{STATUS}</span>
+	</td>
+	<td>
+		<label>&#160;</label>
+		<span class="mobile-tac"><a href="{LINK_DOWNLOAD}" class="js-link-download">{STR_DOWNLOAD_PDF}</a><br/>
+        {LINK_RENEW}
+        {LINK_TERMINATE}</span>
+	</td>
+</tr>
+
+<tr class="hidden js-item-details">
+	<td colspan="6">
+		<div class="details js-details">
+			{BASE_PRICE_DETAILS}
+			{ONE_TIME_FEE_DETAILS}
+			{RENEWAL_FEE_DETAILS}
+			{HOLIDAYS_FEE_DETAILS}
+			{DISCOUNT_DAYS_FEE_DETAILS}
+			{TERMINATION_PENALTY_FEE_DETAILS}
+		</div>
+	</td>
+</tr>
+
+<tr class="car car-hdr hidden js-car-item" data-order="{ID}">
+    <th>{STR_CAR}</th>
+    <th>{STR_RENT_DATE}</th>
+    <th>{STR_PRICE}</th>
+    <th>{STR_DETAILS}</th>
+    <th>&#160;</th>
+    <th>&#160;</th>
+</tr>
+
+{CARS}

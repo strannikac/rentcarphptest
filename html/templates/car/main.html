@@ -1,0 +1,39 @@
+<div class="cars-main js-cars-main">
+    <aside>
+        <form class="js-frm-cars-search" method="post" action="">
+            <h4>{STR_CATEGORY}</h4>
+            <div class="js-filter-category">{CATEGORIES}</div>
+            <h4>{STR_PRODUCER}</h4>
+            <div class="js-filter-producer">{PRODUCERS}</div>
+            <h4>{STR_YEAR}</h4>
+            <div class="js-filter-year">{YEARS}</div>
+            <h4>{STR_COLOR}</h4>
+            <div class="js-filter-color">{COLORS}</div>
+        </form>
+
+        <a class="ico-filters-back js-link-filters-back" href="#">&mapstoleft;</a>
+    </aside>
+
+    <div class="cars-content">
+        <h2>{HDR_CARS}</h2>
+        <p>{TXT_CARS}</p>
+
+        <form class="frm-cars js-frm-cars-list{HIDDEN}" method="post" action="">
+            <a class="ico-filters js-link-filters" href="#">&#160;</a>
+            
+            <select name="currency">{CURRENCIES}</select>
+
+            <div class="sortby js-sortby">
+                <span class="title">{STR_SORTBY}:</span>
+                <a href="#" class="active" data-sort="price" data-desc="0">
+                    {STR_PRICE}<span>&darr;</span>
+                </a>
+                <a href="#" data-sort="year" data-desc="0">
+                    {STR_YEAR}<span></span>
+                </a>
+            </div>
+        </form>
+
+        <div class="items js-cars">{CARS}</div>
+    </div>
+</div>

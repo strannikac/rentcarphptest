@@ -1,0 +1,52 @@
+<div class="profile-console">
+    <nav class="myprofile">
+        <a href="{LINK_PROFILE}"><strong>{STR_MY_PROFILE}</strong></a>
+        <a href="{LINK_ORDERS}">{STR_MY_ORDERS}</a>
+    </nav>
+
+    <h2>{HDR_PROFILE}</h2>
+    <p>{TXT_PROFILE}</p>
+
+    <h3>{HDR_PROFILE_DATA}</h3>
+
+    <form class="js-frm-profile" method="post" action="">
+        <div class="error"></div>
+        <div class="success"></div>
+
+        <div class="frm-item">
+            <input name="email" type="email" maxlength="75" placeholder="{STR_EMAIL}" value="{EMAIL}" readonly="readonly" />
+            <button>{STR_SAVE}</button>
+        </div>
+        <div class="frm-item">
+            <input name="fname" type="text" maxlength="75" placeholder="{STR_FNAME}" value="{FNAME}" />
+            <input name="lname" type="text" maxlength="75" placeholder="{STR_LNAME}" value="{LNAME}" />
+        </div>
+        <div class="frm-item">
+            <select name="country"></select>
+            <select name="region"></select>
+        </div>
+        <div class="frm-item">
+            <input name="personal_code" type="text" maxlength="15" placeholder="{STR_PERSONAL_CODE}" value="{PERSONAL_CODE}" />
+            <input name="phone" type="tel" maxlength="35" placeholder="{STR_PHONE}" value="{PHONE}" />
+        </div>
+        <div class="frm-item">
+            <select name="currency">{CURRENCIES}</select>
+        </div>
+    </form>
+
+    <h3>{HDR_PROFILE_PASSWORD}</h3>
+
+    <form class="js-frm-profile-password" method="post" action="">
+        <div class="error"></div>
+        <div class="success"></div>
+
+        <div class="frm-item">
+            <input name="current" type="password" autocomplete="off" maxlength="20" placeholder="{STR_PASSWORD}" required="required" />
+            <button>{STR_SAVE}</button>
+        </div>
+        <div class="frm-item">
+            <input name="password" type="password" autocomplete="off" maxlength="20" placeholder="{STR_NEW_PASSWORD}" required="required" />
+            <input name="repassword" type="password" autocomplete="off" maxlength="20" placeholder="{STR_RETYPE_NEW_PASSWORD}" required="required" data-retype="1" />
+        </div>
+    </form>
+</div>

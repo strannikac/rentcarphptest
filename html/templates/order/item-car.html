@@ -1,0 +1,35 @@
+<tr class="car hidden js-car-item" data-id="{ID}" data-order="{ORDER_ID}">
+	<td>
+		<label>{STR_CAR}</label>
+		<span class="mobile-tac">{TITLE}<br/>
+		<span class="small">{CATEGORY}</span></span>
+	</td>
+	<td>
+		<label>{STR_RENT_DATE}</label>
+		<span>{DATE_FROM} - {DATE_TILL}</span>
+	</td>
+	<td>
+		<label>{STR_PRICE}</label>
+		<span class="price"><span class="js-price">{PRICE}</span>{CURRENCY_SIGN}</span>
+	</td>
+	<td>
+		<label>&#160;</label>
+		<a href="#" class="js-link-details">{STR_DETAILS}</a>
+	</td>
+    <td class="nomobile">&#160;</td>
+    <td class="nomobile">&#160;</td>
+</tr>
+
+<tr class="car-details hidden js-car-item-details">
+	<td colspan="6">
+		<div class="details js-details">
+			{BASE_PRICE_DETAILS}
+			{ONE_TIME_FEE_DETAILS}
+			{RENEWAL_FEE_DETAILS}
+			{HOLIDAYS_DETAILS}
+			{HOLIDAYS_FEE_DETAILS}
+			{DISCOUNT_DAYS_FEE_DETAILS}
+			{TERMINATION_PENALTY_FEE_DETAILS}
+		</div>
+	</td>
+</tr>

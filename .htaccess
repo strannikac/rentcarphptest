@@ -1,0 +1,7 @@
+DirectoryIndex index.php index.html index.htm
+
+RewriteEngine On
+RewriteBase /placet_group/
+
+RewriteRule ^upload/{0,1}    - [L]
+RewriteRule !\.(gif|css|png|jpg|svg|zip|doc|js|swf|mp3|mpg|php|html|txt|ico|rar|xml)$ index.php      [L]

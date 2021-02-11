@@ -1,0 +1,54 @@
+<div class="popup js-popup js-popup-registration">
+    <div class="popup-fix">
+        <h2>{HDR_SIGNUP}</h2>
+        <p>{TXT_SIGNUP}</p>
+
+        <form class="js-frm-registration" method="post" action="" autocomplete="off">
+            <div class="error"></div>
+
+            <div class="frm-item">
+                <input name="email" type="email" autocomplete="off" maxlength="75" placeholder="{STR_EMAIL}" required="required" />
+                <button>{STR_SIGNUP}</button>
+            </div>
+            <div class="frm-item">
+                <input name="password" type="password" autocomplete="off" maxlength="20" placeholder="{STR_PASSWORD}" required="required" />
+                <input name="repassword" type="password" autocomplete="off" maxlength="20" placeholder="{STR_RETYPE_PASSWORD}" required="required" data-retype="1" />
+            </div>
+            <div class="frm-item">
+                <select name="country"></select>
+                <select name="region"></select>
+            </div>
+
+            <div class="frm-item small">{TXT_SIGNUP_TERMS}</div>
+        </form>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-registration-confirm">
+    <div class="popup-fix">
+        <h2>{HDR_SIGNUP_CONFIRM}</h2>
+        <p>{TXT_SIGNUP_CONFIRM}</p>
+
+        <form class="js-frm-registration-confirm" method="post" action="" autocomplete="off">
+            <div class="error"></div>
+
+            <div class="frm-item">
+                <input name="code" type="text" class="" placeholder="{STR_TYPE_CODE}" required="required" />
+                <button>{STR_CONTINUE}</button>
+            </div>
+        </form>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>
+
+<div class="popup js-popup js-popup-registration-complete">
+    <div class="popup-fix">
+        <h2>{HDR_SIGNUP_COMPLETE}</h2>
+        <p>{TXT_SIGNUP_COMPLETE}</p>
+
+        <a href="#" class="btn-close js-link-closepopup"></a>
+    </div>
+</div>

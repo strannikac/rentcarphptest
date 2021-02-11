@@ -1,0 +1,33 @@
+<div class="item js-car">
+	<div class="photo">
+		<img src="{IMAGE}" />
+	</div>
+
+	<div class="info">
+	    <h4>{TITLE}</h4>
+	    <span class="category">{CATEGORY}</span>
+	    <p>{PRODUCER}, {MODEL}, {COLOR}, {YEAR}</p>
+	    <p>{STR_PRICE}: <span class="price"><span class="js-price">{PRICE}</span>{CURRENCY_SIGN}</span></p>
+	</div>
+
+    <form class="js-frm-inbasket" method="POST" action="" 
+    	data-id="{ID}" 
+    	data-minDays="{MIN_DAYS}" 
+    	data-maxDays="{MAX_DAYS}" 
+    	data-price="{DAY_PRICE}" 
+    	data-holidayPercent="{HOLIDAY_PERCENT}" 
+    	data-oneTimeFee="{ONE_TIME_FEE}" 
+    	data-discountDays="{DISCOUNT_DAYS}" 
+    	data-discountAddDays="{DISCOUNT_ADD_DAYS}" 
+	>
+		<div class="rented-dates js-rented-dates">{RENTED_DATES}</div>
+		<div class="error"></div>
+		<div class="success"></div>
+		
+    	<div class="frm-item">
+	        <input name="from" class="datepicker js-from" value="{DATE_FROM}" readonly="readonly" />
+	        <input name="till" class="datepicker js-till" value="{DATE_TILL}" readonly="readonly" />
+	    </div>
+        <button>{STR_RENT}</button>
+    </form>
+</div>

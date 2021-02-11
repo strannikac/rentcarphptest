@@ -1,0 +1,9 @@
+{
+  "name": "carsrent/testtask",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "phpunit/phpunit": "*",
+    "mpdf/mpdf": "*"
+  }
+}

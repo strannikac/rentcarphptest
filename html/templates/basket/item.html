@@ -1,0 +1,57 @@
+<tr class="js-item" data-id="{ID}">
+	<td>
+		<label>{STR_CAR}</label>
+
+		<span class="mobile-tac">
+			{TITLE}<br/>
+			<span class="small">{CATEGORY}</span>
+		</span>
+	</td>
+	<td>
+		<label>{STR_RENT_DATE}</label>
+
+		<form class="js-frm-update" method="POST" action="" 
+	    	data-car="{CAR_ID}" 
+	    	data-minDays="{MIN_DAYS}" 
+	    	data-maxDays="{MAX_DAYS}" 
+	    	data-price="{DAY_PRICE}" 
+	    	data-holidayPercent="{HOLIDAY_PERCENT}" 
+	    	data-oneTimeFee="{ONE_TIME_FEE}" 
+	    	data-discountDays="{DISCOUNT_DAYS}" 
+	    	data-discountAddDays="{DISCOUNT_ADD_DAYS}" 
+		>
+			<div class="rented-dates js-rented-dates">{RENTED_DATES}</div>
+		
+	    	<div class="frm-item">
+		        <input name="from" class="datepicker js-from" value="{DATE_FROM}" readonly="readonly" data-prev="{DATE_FROM}" />
+		        <input name="till" class="datepicker js-till" value="{DATE_TILL}" readonly="readonly" data-prev="{DATE_TILL}" />
+		        <button class="disabled">{STR_SAVE}</button>
+		    </div>
+			<div class="error"></div>
+	    </form>
+	</td>
+	<td>
+		<label>{STR_PRICE}</label>
+		<span class="price"><span class="js-price">{PRICE}</span>{CURRENCY_SIGN}</span>
+	</td>
+	<td>
+		<label>&#160;</label>
+		<a href="#" class="js-link-details">{STR_DETAILS}</a>
+	</td>
+	<td>
+		<label>&#160;</label>
+		<a href="#" class="js-link-delete">{STR_DELETE}</a>
+	</td>
+</tr>
+
+<tr class="hidden js-item-details">
+	<td colspan="5">
+		<div class="details js-details">
+			{BASE_PRICE_DETAILS}
+			{ONE_TIME_FEE_DETAILS}
+			{HOLIDAYS_DETAILS}
+			{HOLIDAYS_FEE_DETAILS}
+			{DISCOUNT_DAYS_FEE_DETAILS}
+		</div>
+	</td>
+</tr>
