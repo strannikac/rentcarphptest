@@ -142,7 +142,7 @@ footer {
     margin-top: auto;
     background-color: #007700;
     color: #ffffff;
-    min-width: 480px;
+    /*min-width: 480px;*/
     z-index: 100;
 }
 
@@ -205,7 +205,7 @@ nav.myprofile a {
 }
 .cars-main .cars-content .frm-cars .ico-filters {
     display: none;
-    width: 20px;
+    width: 25px;
     height: 23px;
     background-position: top left;
     background-repeat: no-repeat;
