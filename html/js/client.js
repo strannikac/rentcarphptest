@@ -452,6 +452,14 @@ $(function(){
         {
             container.parent().hide();
         }
+
+        container = $('.js-location-switcher .js-country, .js-location-switcher .js-region, .js-lang-switcher');
+
+        if (!container.is(e.target) 
+            && container.has(e.target).length === 0)
+        {
+            container.find('ul').hide();
+        }
     });
 
     $('body').on("click", '.js-link-closepopup', function(){

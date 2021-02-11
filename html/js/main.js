@@ -104,23 +104,21 @@ $(function(){
 	setLocationForRegistration();
 	setLocationForConsole();
 
-    $('body').on("click mouseover", '.js-lang-switcher .js-current', function(){
+    $('body').on("click", '.js-lang-switcher .js-current', function(){
         $('.js-lang-switcher ul').css('display', 'flex');
+		return false;
     });
 
-    $('body').on("mouseleave", '.js-lang-switcher', function(){
-        $(this).find('ul').hide();
-    });
-
-    $('body').on("click mouseover", '.js-location-switcher .js-country .js-current', function(){
+    $('body').on("click", '.js-location-switcher .js-country .js-current', function(){
         $('.js-location-switcher .js-country ul').css('display', 'flex');
+		return false;
     });
 
     $('body').on("mouseleave", '.js-location-switcher .js-country', function(){
         $(this).find('ul').hide();
     });
 
-    $('body').on("click mouseover", '.js-location-switcher .js-region .js-current', function(){
+    $('body').on("click", '.js-location-switcher .js-region .js-current', function(){
         let el = $('.js-location-switcher .js-region ul');
         let width = el.parents('.block-center').width();
 
@@ -129,6 +127,8 @@ $(function(){
 		}
 
         el.css({'width': width + 'px', 'display': 'flex'});
+
+		return false;
     });
 
     $('body').on("mouseleave", '.js-location-switcher .js-region', function(){
