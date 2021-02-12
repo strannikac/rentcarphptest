@@ -70,45 +70,49 @@ function disableRentDates(date) {
     return [true]; 
 }
 
+function selectDateFrom(date, item) {
+    let frm = item.parents('.js-frm-inbasket');
+    let till = frm.find('.js-till');
+
+    let tillDate = createDate(till.val());
+    let minTillDate = createDate(date);
+
+    const minDays = frm.attr('data-minDays');
+    if(minDays > 1) {
+        minTillDate.setDate(minTillDate.getDate() + (minDays - 1));
+    }
+
+    minTillDate = dateToString(minTillDate);
+    tillDate = dateToString(tillDate);
+
+    till.datepicker("option", "minDate", new Date(minTillDate));
+
+    if(tillDate < minTillDate) {
+        till.datepicker("setDate", new Date(minTillDate));
+    }
+
+    const maxDays = +frm.attr('data-maxDays');
+    if(maxDays > 0) {
+        let maxTillDate = createDate(date);
+
+        maxTillDate.setDate(maxTillDate.getDate() + (maxDays - 1));
+        till.datepicker("option", "maxDate", maxTillDate);
+        maxTillDate = dateToString(maxTillDate);
+
+        if(tillDate > maxTillDate) {
+            item.datepicker("setDate", new Date(maxTillDate));
+        }
+    }
+
+    calculatePrice(frm);
+}
+
 function setCarsData() {
     $(".datepicker.js-from").datepicker({
         minDate: 0, 
         beforeShowDay: disableRentDates, 
         onSelect: function(date){
-            let frm = $(this).parents('.js-frm-inbasket');
-            let till = frm.find('.js-till');
-
-            let tillDate = createDate(till.val());
-            let minTillDate = createDate(date);
-
-            const minDays = frm.attr('data-minDays');
-            if(minDays > 1) {
-                minTillDate.setDate(minTillDate.getDate() + (minDays - 1));
-            }
-
-            minTillDate = dateToString(minTillDate);
-            tillDate = dateToString(tillDate);
-
-            till.datepicker("option", "minDate", new Date(minTillDate));
-
-            if(tillDate < minTillDate) {
-                till.datepicker("setDate", new Date(minTillDate));
-            }
-
-            const maxDays = +frm.attr('data-maxDays');
-            if(maxDays > 0) {
-                let maxTillDate = createDate(date);
-
-                maxTillDate.setDate(maxTillDate.getDate() + (maxDays - 1));
-                till.datepicker("option", "maxDate", maxTillDate);
-                maxTillDate = dateToString(maxTillDate);
-
-                if(tillDate > maxTillDate) {
-                    $(this).datepicker("setDate", new Date(maxTillDate));
-                }
-            }
-
-            calculatePrice(frm);
+            selectDateFrom(date, $(this));
         }
     });
 
@@ -143,6 +147,10 @@ function setCarsData() {
     $('.js-car .js-price').each( function() {
         const val = +$(this).text();
         $(this).text(val.toFixed(2));
+    });
+
+    $('.datepicker.js-from').each( function() {
+        selectDateFrom($(this).val(), $(this));
     });
 }
 
